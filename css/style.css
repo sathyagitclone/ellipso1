@@ -1,48 +1,9 @@
 @charset "UTF-8";
-/*-----------------------------------------------------------
 
-  Template Name: Droow - Ajax Portfolio Showcase HTML Template
-  Template URI: http://theme.dsngrid.com/droow
-  Description: Droow Ajax Portfolio Showcase HTML Template
-  Author: design_grid
-  Author URI: https://themeforest.net/user/design_grid
-  Version: 1.0.0
-
--------------------------------------------------------------*/
-/*-----------------------------------------------------------
-
-    1.  Variables
-    2.  Mixins
-      - Mixins Master
-      - Utilities
-    3.  Normalize
-    4.  Helpers
-    5. Typography
-      - Copy
-	  - Headings
-	6. Core
-    7. Navigation
-      - Links
-      - Menus
-	  - Next & Previous
-    8. Content
-      - pages
-      - Comments
-      - Archives
-      - Footer
-    9.Forms
-      - Button
-      - Fields
-    10.Blocks
-    11.Media
-      - captions
-    12.Version Light
-
--------------------------------------------------------------*/
 :root, :root .v-light {
   --bg-color: #f9f9f9;
   --assistant-color: #e6e6e6;
-  --theme-color: #14bfb5;
+  --theme-color: #6f153c;;
   --font-color: #0009;
   --heading-color: #000;
   --border-color: #bebebe;
@@ -125,13 +86,16 @@ body, .main-root {
   color: var(--font-color);
 }
 
+h1, h2, h3, h4, h5{
+font-family: "Roboto Condensed", sans-serif!important; font-weight: 600; letter-spacing: 1;}
+
 .main-root {
   position: relative;
 }
 
 .line {
   position: absolute;
-  background-color: var(--border-color);
+  background-color: #ffffff6b;
 }
 .line.line-top, .line.line-bottom {
   left: -15px;
@@ -309,8 +273,8 @@ body, .main-root {
 }
 @media only screen and (min-width: 992px) {
   body.dsn-line-style .main-content {
-    padding-left: var(--body-style-space);
-    padding-right: var(--body-style-space);
+    /* padding-left: var(--body-style-space);
+    padding-right: var(--body-style-space); */
   }
 }
 
@@ -337,12 +301,12 @@ body, .main-root {
     background-color: var(--border-color);
     z-index: 100;
   }
-  body.dsn-line-style .line-border-style:before {
+  /* body.dsn-line-style .line-border-style:before {
     left: var(--body-style-space);
   }
   body.dsn-line-style .line-border-style:after {
     right: var(--body-style-space);
-  }
+  } */
 }
 
 /**
@@ -1014,7 +978,8 @@ body:not(.v-dark):not(.dsn-line-style) .site-header {
     position: fixed;
     width: var(--body-style-space);
     padding: 0;
-    top: 50%;
+    top: 30px;
+    right: 60px;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -2260,7 +2225,7 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
 }
 .box-awards-item.has-border {
   padding: 10px;
-  border: 1px solid var(--border-color);
+  border: 1px solid #ffffff6b;;
 }
 .box-awards-item .title {
   font-weight: bold;
@@ -4431,11 +4396,11 @@ header .scroll-d img {
 /* -------------------------------------------------------
                    Blog
 -------------------------------------------------------- */
-.dsn-posts.d-grid.grid-lg-1 {
+/* .dsn-posts.d-grid.grid-lg-1 {
   -ms-grid-columns: (1fr)[1];
   grid-template-columns: repeat(1, 1fr);
   grid-row-gap: var(--margin-padding);
-}
+} */
 @media only screen and (max-width: 991px) {
   .dsn-posts.d-grid.grid-lg-1 {
     grid-row-gap: var(--margin-padding-mobile);
@@ -5304,3 +5269,62 @@ body.dsn-show-contact .contact-modal {
 .box-seat .pro-text {
   bottom: -120px;
 }
+
+[data-overlay="6"]:before {
+  opacity: 0.15!important;
+}
+
+.about-section{
+  padding-top: var(--margin-padding)!important; margin-top: 0!important;}
+
+.about-section{  background-image: url('../assets/img/aboutbg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; position: relative;}
+.about-section::after{content:'';
+  /* background: #9a004c; */
+  background: #11769e;
+  /* background: #ca9800; */
+   opacity: .9; position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+#logo{mix-blend-mode: exclusion;}
+
+.zindex1{ z-index: 1;}
+
+.white-text, .white-text *{ color: #ffffff!important;}
+
+.services-section{ background-image: url('../assets/img/servicesBg.jpg');
+  background-repeat: no-repeat;
+  padding-top: var(--margin-padding)!important; margin-top: 0!important;
+  background-size: cover; position: relative;}
+
+  .services-section::after{content:'';
+    /* background: #9a004c; */
+    background: #9a004c;
+  
+     opacity: .8; position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+    .services .services-item .services-item-inner .icon img, .services .services-item .services-item-inner .icon svg {
+
+      fill: #e07e66!important;
+  }
+
+  .pinkbg{background-color:#9a004c!important}
+  /* .greenbg{background-color:#71911b!important} */
+  .greenbg{background-color: #71911b!important}
+  .bluebg{background-color:#11769e!important}
+  .yellowbg{background-color:#ca9800!important}
+  .greybg{ background-color:#232728}
+
+.gradbg{
+  background-image: -webkit-gradient(linear, left top, right top, from(#423f9c), to(#85245a));
+    background-image: -o-linear-gradient(left, #423f9c, #85245a);
+    background-image: linear-gradient(90deg, #423f9c, #85245a);
+  }
